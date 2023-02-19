@@ -14,7 +14,8 @@ const Character = () => {
     const fetchCharacter = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/character/${id}`
+          `https://site--marvel-backend--zb2pjvnm674v.code.run/character/${id}`
+          // `http://localhost:4000/character/${id}`
         );
         // console.log(response.data);
         setData(response.data);
@@ -27,7 +28,8 @@ const Character = () => {
     const fetchRelatedComics = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/comics/character/${id}`
+          `https://site--marvel-backend--zb2pjvnm674v.code.run/comics/character/${id}`
+          // `http://localhost:4000/comics/character/${id}`
         );
         // console.log(response.data);
         setData(response.data);
