@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle&display=swap");
+
+.main-character-page {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  background-color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.character-box img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  /* border: 1px solid red; */
+}
+
+.character-page-large-img {
+  width: 40%;
+  overflow: hidden;
+  height: 780px;
+}
+
+.search-pagination-box {
+  width: 780px;
+  height: 60px;
+  margin: 0 auto;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  background-color: white;
+  gap: 60px;
+}
+.search-pagination-box span {
+  font-family: "Bangers", sans-serif;
+  color: rgb(72, 72, 185);
+  font-size: 40px;
+}
+
+.pagination-buttons button {
+  background-color: white;
+  /* border: 1px solid rgb(72, 72, 185); */
+  border: none;
+  color: rgb(72, 72, 185);
+  font-size: 16px;
+  font-family: "Cabin Sketch", sans-serif;
+  width: 50px;
+}
+.hidden {
+  display: hide;
+}
+.display {
+  color: rgb(72, 72, 185);
+}
+
+.search-pagination-box input {
+  width: 300px;
+  height: 25px;
+  outline: none;
+  border: 1px solid rgb(72, 72, 185);
+  background-color: rgb(244, 244, 254);
+  border-radius: 5px;
+}
+
+.search-pagination-box input::placeholder {
+  font-size: 16px;
+  font-family: "Cabin Sketch", sans-serif;
+  text-align: center;
+  color: rgb(72, 72, 185);
+}
+.character-card-box {
+  margin-top: 70px;
+}
+.character-page-large-img img {
+  width: 110%;
+}
+.character-box {
+  width: 65%;
+  border-right: 2px dotted rgb(72, 72, 185);
+  border-top: 2px dotted rgb(72, 72, 185);
+  border-bottom: 2px dotted rgb(72, 72, 185);
+  height: 780px;
+  overflow-x: scroll;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.character-box::-webkit-scrollbar {
+  display: none;
+}
+
+.character-card {
+  /* border: 1px solid orange; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.character-card p {
+  font-family: "Cabin Sketch", sans-serif;
+  padding-top: 5px;
+  padding-top: 5px;
+}
+
+.character-card article {
+  width: 180px;
+  height: 240px;
+  /* border: 1px solid purple; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-desc {
+  height: 28px;
+  overflow-x: scroll;
+  font-family: "News Cycle", sans-serif;
+  font-size: 14px;
+  text-align: justify;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.character-desc::-webkit-scrollbar {
+  display: none;
+}
+
+.title-favButton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-favourites {
+  display: none;
+}

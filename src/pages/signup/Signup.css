@@ -1,0 +1,61 @@
+.signup-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Cabin Sketch", sans-serif;
+}
+
+.signup-box {
+  width: 270px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 60px;
+  gap: 15px;
+}
+
+.signup-box h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.signup-box .input-box {
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: 1px solid #b7b7b8;
+  outline: none;
+  width: 270px;
+  height: 35px;
+}
+
+.input-box::placeholder {
+  font-size: 16px;
+  font-family: "Cabin Sketch", sans-serif;
+  color: #b7b7b8;
+}
+
+.signup-box p {
+  font-size: 12px;
+  color: #999999;
+}
+
+.signup-box button {
+  font-size: 16px;
+  background-color: rgb(72, 72, 185);
+  font-family: "Cabin Sketch", sans-serif;
+  color: white;
+  border: none;
+  margin-top: 40px;
+  width: 270px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.signup-box .connect-here {
+  font-size: 16px;
+  font-family: "News Cycle", sans-serif;
+}

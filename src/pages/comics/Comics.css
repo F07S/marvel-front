@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle&display=swap");
+.main-comic-page {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.comic-box img {
+  width: 180px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.comic-page-large-img {
+  width: 40%;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  height: 780px;
+}
+.search-pagination-box-comics {
+  width: 790px;
+  height: 60px;
+  margin: 0 auto;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  background-color: white;
+  gap: 60px;
+}
+.search-pagination-box-comics span {
+  font-family: "Bangers", sans-serif;
+  color: #c32619;
+  font-size: 40px;
+}
+
+.pagination-buttons-comics button {
+  background-color: white;
+  /* border: 1px solid rgb(72, 72, 185); */
+  border: none;
+  color: #c32619;
+  font-size: 16px;
+  font-family: "Cabin Sketch", sans-serif;
+  width: 50px;
+}
+.hidden {
+  display: hide;
+}
+.display {
+  color: #c32619;
+}
+
+.search-pagination-box-comics input {
+  width: 300px;
+  height: 25px;
+  outline: none;
+  border: 1px solid #c32619;
+  background-color: #f9f0ef;
+  border-radius: 5px;
+}
+
+.search-pagination-box-comics input::placeholder {
+  font-size: 16px;
+  font-family: "Cabin Sketch", sans-serif;
+  text-align: center;
+  color: #c32619;
+}
+.comic-page-large-img img {
+  width: 110%;
+}
+.comic-box {
+  width: 65%;
+  /* border: 1px solid green; */
+  border-right: 2px dotted #c32619;
+  border-top: 2px dotted #c32619;
+  border-bottom: 2px dotted #c32619;
+  height: 780px;
+  overflow-x: scroll;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.comic-card {
+  /* border: 1px solid orange; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.comic-box::-webkit-scrollbar {
+  display: none;
+}
+.comic-card-box {
+  margin-top: 70px;
+}
+.comic-card p {
+  font-family: "Cabin Sketch", sans-serif;
+  padding-top: 5px;
+  padding-top: 5px;
+}
+
+.comic-card article {
+  width: 180px;
+  height: 405px;
+  /* border: 1px solid purple; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comic-desc {
+  height: 74px;
+  overflow-x: scroll;
+  font-family: "News Cycle", sans-serif;
+  font-size: 14px;
+  text-align: justify;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.comic-desc::-webkit-scrollbar {
+  display: none;
+}

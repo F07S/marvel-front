@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap");
+header {
+  width: 1280px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 2px solid black; */
+}
+
+header img {
+  width: 100px;
+}
+
+header button {
+  font-family: "Cabin Sketch", sans-serif;
+  font-size: 18px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 20px;
+  border: 0.5px black solid;
+}
+
+header button:hover {
+  background-color: rgb(235, 234, 234);
+}
+
+.navigation {
+  gap: 20px;
+}
+
+.deconnect {
+  border: 0.5px #ba4242 solid;
+  color: #ba4242;
+  border: none;
+}

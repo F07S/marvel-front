@@ -1,0 +1,12 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://cdn.shopify.com/s/files/1/0152/6487/4560/products/irnman_cnu_unframed.jpg?v=1644272382&width=970);
+}
+
+.center-block {
+  width: 1400px;
+  height: 100vh;
+  background-color: white;
+  margin: 0 auto;
+}
