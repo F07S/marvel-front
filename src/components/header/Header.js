@@ -15,9 +15,12 @@ const Header = ({ handleToken }) => {
         <Link to="/comics">
           <button>COMICS</button>
         </Link>
-        <Link to="/favourites">
-          <button>FAVOURITES</button>
-        </Link>
+
+        {token && (
+          <Link to="/favourites">
+            <button>FAVOURITES</button>
+          </Link>
+        )}
 
         {token ? (
           <button

@@ -49,10 +49,13 @@ function App() {
       <Header token={token} handleToken={handleToken} />
 
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Home handleToken={handleToken} />}></Route>
         <Route path="/character/:id" element={<Character />}></Route>
         <Route path="/comics" element={<Comics />}></Route>
-        <Route path="/favourites" element={<Favourites />}></Route>
+        <Route
+          path="/favourites"
+          element={<Favourites token={token} />}
+        ></Route>
         <Route
           path="/signup"
           element={<Signup handleToken={handleToken} />}

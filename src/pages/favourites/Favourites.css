@@ -1,0 +1,67 @@
+.fav-com {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.favourites {
+  width: 1180px;
+  padding: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.favourite-card {
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 130px;
+  gap: 10px;
+  align-items: center;
+}
+.favImage {
+  width: 100px;
+  height: 100px;
+}
+
+.displayNone {
+  display: none;
+}
+
+.comment-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 1180px;
+  padding: 50px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.comment-section input textarea {
+  width: 250px;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments {
+  border: 1px solid black;
+  width: 600px;
+}
+
+.user {
+  background-color: rgb(65, 63, 63);
+  color: white;
+}

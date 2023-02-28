@@ -8,11 +8,12 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [skip, setSkip] = useState(0);
-  const [favourite, setFavourite] = useState([]);
   const [counter, setCounter] = useState(0);
 
   // Navigate
   const navigate = useNavigate();
+
+  const token = Cookies.get("token");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,10 +35,6 @@ const Home = () => {
   // onChange Input Handlers
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
-  };
-
-  const addFavourite = (fav) => {
-    setFavourite([...favourite, fav]);
   };
 
   return isLoading ? (
@@ -121,36 +118,45 @@ const Home = () => {
                     </Link>
                     <div className="title-favButton">
                       <p>{character.name}</p>
-                      <button
-                        className="add-favourites"
-                        onClick={() => {
-                          addFavourite(characterData);
-                          // console.log(characterData);
-                          // const name = character.name;
-                          // console.log(name);
-                          // const img =
-                          //   character.thumbnail.path +
-                          //   "." +
-                          //   character.thumbnail.extension;
-                          // console.log(img);
-                          const token = character._id;
-                          Cookies.set("token", token, {
-                            expires: 10,
-                          });
 
-                          navigate("/favourites", {
-                            state: {
-                              // characterName: { name },
-                              // characterImg: { img },
-                              characterToken: { token },
-                              characterNameData: characterData[0],
-                              characterImgData: characterData[1],
-                            },
-                          });
-                        }}
-                      >
-                        add fav
-                      </button>
+                      {token ? (
+                        <button
+                          onClick={async () => {
+                            try {
+                              const response = await axios.post(
+                                "https://site--marvel-backend--zb2pjvnm674v.code.run/addfavourites",
+                                // "http://localhost:4000/addfavourites",
+
+                                {
+                                  name: character.name,
+                                  image: `${character.thumbnail.path}.${character.thumbnail.extension}`,
+                                }
+                              );
+
+                              alert("Added to Favourites");
+                              // navigate("/favourites");
+                              console.log(response.data);
+                            } catch (error) {
+                              if (
+                                (error.response.data.message = `E11000 duplicate key error collection: Marvel.favo…es index: name_1 dup key: { name: ${character.name} }`)
+                              ) {
+                                return alert("Already added to favourites");
+                              }
+                              console.log(error.response.data.message);
+                            }
+                          }}
+                        >
+                          add fav
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() => {
+                            navigate("/login");
+                          }}
+                        >
+                          add fav
+                        </button>
+                      )}
                     </div>
                     <div className="character-desc">
                       {character.description}
