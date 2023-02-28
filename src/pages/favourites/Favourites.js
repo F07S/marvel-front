@@ -14,9 +14,12 @@ const Favourites = ({ token }) => {
   const navigate = useNavigate();
 
   const handleNameChange = (event) => {
+    event.preventDefault();
     setName(event.target.value);
   };
+
   const handleCommentChange = (event) => {
+    event.preventDefault();
     setComment(event.target.value);
   };
 
@@ -49,7 +52,8 @@ const Favourites = ({ token }) => {
           comment: comment,
         }
       );
-      console.log(response.data);
+      setCommentsData(response.data);
+      // console.log(response.data);
     } catch (error) {
       console.log(error.response.data);
     }
@@ -62,7 +66,7 @@ const Favourites = ({ token }) => {
           `https://site--marvel-backend--zb2pjvnm674v.code.run/comments`
           // `http://localhost:4000/comments`
         );
-        console.log(response.data);
+        // console.log(response.data);
         setCommentsData(response.data);
         setIsCommentLoading(false);
       } catch (error) {
@@ -80,8 +84,9 @@ const Favourites = ({ token }) => {
         {!token
           ? navigate("/")
           : data.favourites.map((fav) => {
+              // console.log(fav._id);
               return (
-                <div className="favourite-card">
+                <div className="favourite-card" key={fav._id}>
                   <p>{fav.name}</p>
                   <img className="favImage" src={fav.image} alt="character" />
                   <button
@@ -91,8 +96,8 @@ const Favourites = ({ token }) => {
                           `https://site--marvel-backend--zb2pjvnm674v.code.run/favourites/delete/${fav._id}`
                           // `http://localhost:4000/favourites/delete/${fav._id}`
                         );
-                        window.location.reload(true);
-                        console.log(response.data);
+                        setData(response.data);
+                        // console.log(response.data);
                       } catch (error) {
                         console.log(error.response.data);
                       }
@@ -110,7 +115,8 @@ const Favourites = ({ token }) => {
         <section className="comment-section">
           <form
             className="input-area"
-            onSubmit={() => {
+            onSubmit={(event) => {
+              event.preventDefault();
               handleCommentSubmit();
             }}
           >
@@ -119,22 +125,22 @@ const Favourites = ({ token }) => {
             <input
               type="text"
               placeholder="Name"
-              value={name}
               onChange={handleNameChange}
+              value={name}
             />
             <textarea
               placeholder="Write your comment here..."
               rows={4}
               cols={40}
-              value={comment}
               onChange={handleCommentChange}
+              value={comment}
             />
 
-            <button type="submit">Post</button>
+            <button>Post</button>
           </form>
           <div>
             {commentsData.comments.map((com) => {
-              console.log(com);
+              // console.log(com._id);
               return (
                 <div className="comments" key={com._id}>
                   <p className="user">{com.name}</p>
