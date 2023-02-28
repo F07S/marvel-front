@@ -41,8 +41,8 @@ const Favourites = ({ token }) => {
   const handleCommentSubmit = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/favourites/comments",
-        // "https://site--marvel-backend--zb2pjvnm674v.code.run/favourites/comments",
+        // "http://localhost:4000/favourites/comments",
+        "https://site--marvel-backend--zb2pjvnm674v.code.run/favourites/comments",
 
         {
           name: name,

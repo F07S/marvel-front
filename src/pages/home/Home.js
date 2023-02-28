@@ -98,12 +98,6 @@ const Home = () => {
           <div className="character-card-box">
             <div className="character-card">
               {data.results.map((character) => {
-                const characterData = [
-                  character.name,
-                  character.thumbnail.path +
-                    "." +
-                    character.thumbnail.extension,
-                ];
                 return (
                   <article key={character._id}>
                     <Link to={`/character/${character._id}`}>
